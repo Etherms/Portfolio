@@ -10,40 +10,57 @@ $fw:500;
 $fs:19px;
 
 
+body{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+    nav{
+        background:$background;
+        height: 8vh;
+        padding: 10px;
+        .main-logo{
+            &__text{
+                color: $lighttext;
 
-nav{
-    background:$background;
-    height: 8vh;
-    padding: 10px;
-    .main-logo{
-        & .main-logo--text{
-            color: $lighttext;
+            }
+        }
+        .right-nav{
+            margin-left: auto;
+            ul{
+                font-weight: $fw;
+                font-size: $fs;
+                list-style: none;
+                li{
+                    padding-right: 10px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $lighttext;
+                    outline: none;
+                }
+            }
+            button{
+                border: none;
+                background:$contrastcolor;
+                border-radius: 10px;
+                padding: 2px 15px;
+                a{
+                    text-decoration: none;
+                    color: $lighttext;
+                }
+            }
 
         }
     }
-    .right-nav{
-        margin-left: auto;
-        ul{
-            font-weight: $fw;
-            font-size: $fs;
-            list-style: none;
-            li{
-                padding-right: 10px;
-            }
-            a{
-                text-decoration: none;
-                color: $lighttext;
-                outline: none;
-            }
-        }
-        button{
-            border: none;
-            background:$contrastcolor;
-            border-radius: 10px;
-            padding: 2px 15px;
-            a{
-                text-decoration: none;
-                color: $lighttext;
+    .main-section{
+        color: $lighttext;
+        height: 100vh;
+        background: $background;
+        padding-left: 4rem;
+        &__name{
+            color:$contrastcolor;
+            & span{
+                color:$lighttext;
             }
         }
 

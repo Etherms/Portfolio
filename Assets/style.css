@@ -1,35 +1,52 @@
-nav {
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body nav {
   background: #222831;
   height: 8vh;
   padding: 10px;
 }
-nav .main-logo .main-logo--text {
+body nav .main-logo__text {
   color: #EEEEEE;
 }
-nav .right-nav {
+body nav .right-nav {
   margin-left: auto;
 }
-nav .right-nav ul {
+body nav .right-nav ul {
   font-weight: 500;
   font-size: 19px;
   list-style: none;
 }
-nav .right-nav ul li {
+body nav .right-nav ul li {
   padding-right: 10px;
 }
-nav .right-nav ul a {
+body nav .right-nav ul a {
   text-decoration: none;
   color: #EEEEEE;
   outline: none;
 }
-nav .right-nav button {
+body nav .right-nav button {
   border: none;
   background: #00ADB5;
   border-radius: 10px;
   padding: 2px 15px;
 }
-nav .right-nav button a {
+body nav .right-nav button a {
   text-decoration: none;
+  color: #EEEEEE;
+}
+body .main-section {
+  color: #EEEEEE;
+  height: 100vh;
+  background: #222831;
+  padding-left: 4rem;
+}
+body .main-section__name {
+  color: #00ADB5;
+}
+body .main-section__name span {
   color: #EEEEEE;
 }
 
