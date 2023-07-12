@@ -1,5 +1,51 @@
+$background:#222831;
+$lighttext:#EEEEEE;
+$contrastcolor:#00ADB5;
+
 $darkbgcolor:#0c0808;
-$lighttext:#ffffff;
+
 $bgcolor: lightblue;
 $textcolor: darkblue;
-$fontsize: 18px;
+$fw:500;
+$fs:19px;
+
+
+
+nav{
+    background:$background;
+    height: 8vh;
+    padding: 10px;
+    .main-logo{
+        & .main-logo--text{
+            color: $lighttext;
+
+        }
+    }
+    .right-nav{
+        margin-left: auto;
+        ul{
+            font-weight: $fw;
+            font-size: $fs;
+            list-style: none;
+            li{
+                padding-right: 10px;
+            }
+            a{
+                text-decoration: none;
+                color: $lighttext;
+                outline: none;
+            }
+        }
+        button{
+            border: none;
+            background:$contrastcolor;
+            border-radius: 10px;
+            padding: 2px 15px;
+            a{
+                text-decoration: none;
+                color: $lighttext;
+            }
+        }
+
+    }
+}
