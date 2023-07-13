@@ -2,14 +2,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
 }
 body nav {
-  background: #222831;
   height: 8vh;
   padding: 10px;
 }
 body nav .main-logo__text {
-  color: #EEEEEE;
+  color: #1b1b1b;
 }
 body nav .right-nav {
   margin-left: auto;
@@ -18,36 +19,146 @@ body nav .right-nav ul {
   font-weight: 500;
   font-size: 19px;
   list-style: none;
+  margin-right: 2rem;
 }
 body nav .right-nav ul li {
   padding-right: 10px;
 }
 body nav .right-nav ul a {
   text-decoration: none;
-  color: #EEEEEE;
+  color: #1b1b1b;
   outline: none;
+}
+body nav .right-nav ul a:hover {
+  color: #353535;
 }
 body nav .right-nav button {
   border: none;
   background: #00ADB5;
   border-radius: 10px;
   padding: 2px 15px;
+  margin-right: 2rem;
 }
 body nav .right-nav button a {
   text-decoration: none;
-  color: #EEEEEE;
+  color: #1b1b1b;
 }
-body .main-section {
-  color: #EEEEEE;
+
+.floating-links {
+  position: absolute;
+  display: flex;
+  height: 600px;
+}
+.floating-links > * {
+  margin-bottom: 2rem;
+}
+
+.main-section {
+  color: #1b1b1b;
   height: 100vh;
-  background: #222831;
-  padding-left: 4rem;
+  background: #FFFFFF;
 }
-body .main-section__name {
+.main-section__left {
+  margin-left: 7rem;
+  margin-top: -5rem;
+  max-width: 700px;
+}
+.main-section__left--greetings {
+  font-size: 4.12rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.main-section__left--greetings span {
   color: #00ADB5;
 }
-body .main-section__name span {
-  color: #EEEEEE;
+.main-section__left--do {
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.main-section__left--desc {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.main-section__right {
+  height: 100%;
+  flex: 1;
+  position: relative;
+}
+.main-section__right--backgroundcolor {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  border-radius: 45% 55% 34% 66%/26% 29% 71% 74%;
+  transform: translate(-63%, -50%) rotate(180deg);
+  background: #4CA1AF; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #C4E0E5, #242998); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #C4E0E5, #242998); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.about {
+  height: 120vh;
+  background: #242998;
+  position: relative;
+}
+.about .custom-shape-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.about .custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 73px;
+}
+.about .custom-shape-divider-top .shape-fill {
+  fill: #FFFFFF;
+}
+.about .about-content {
+  padding: 100px 2rem 0;
+}
+.about .about-content__left {
+  color: #FFFFFF;
+  flex: 1;
+}
+.about .about-content__left--heading {
+  color: #09e2ee;
+  margin-bottom: 10px;
+  font-size: 4.12rem;
+}
+.about .curve {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+.about .curve::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background: #FFFFFF;
+  bottom: 12px;
+  transform: translate(85%, 65%);
+}
+.about .curve::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background: #242998;
+  bottom: 0;
+  transform: translate(-4%, 40%);
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */

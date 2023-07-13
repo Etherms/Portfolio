@@ -1,26 +1,28 @@
-$background:#222831;
-$lighttext:#EEEEEE;
+// $background:#222831;
+$secondbackground:#242998;
+$background:#FFFFFF;
+$text:#1b1b1b;
+$hovercolor:#353535;
 $contrastcolor:#00ADB5;
-
-$darkbgcolor:#0c0808;
-
-$bgcolor: lightblue;
-$textcolor: darkblue;
 $fw:500;
 $fs:19px;
+$largefont: 4.12rem;
 
 
 body{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+position: relative;
+overflow-x: hidden;
+
     nav{
-        background:$background;
+        // background:$background;  
         height: 8vh;
         padding: 10px;
         .main-logo{
             &__text{
-                color: $lighttext;
+                color: $text;
 
             }
         }
@@ -30,13 +32,17 @@ box-sizing: border-box;
                 font-weight: $fw;
                 font-size: $fs;
                 list-style: none;
+                margin-right: 2rem;
                 li{
                     padding-right: 10px;
                 }
                 a{
                     text-decoration: none;
-                    color: $lighttext;
+                    color: $text;
                     outline: none;
+                    &:hover{
+                        color:$hovercolor ; 
+                    }
                 }
             }
             button{
@@ -44,25 +50,135 @@ box-sizing: border-box;
                 background:$contrastcolor;
                 border-radius: 10px;
                 padding: 2px 15px;
+                margin-right: 2rem;
                 a{
                     text-decoration: none;
-                    color: $lighttext;
+                    color: $text;
                 }
             }
-
         }
     }
-    .main-section{
-        color: $lighttext;
-        height: 100vh;
-        background: $background;
-        padding-left: 4rem;
-        &__name{
-            color:$contrastcolor;
+}
+.floating-links{
+    position: absolute;
+    display:flex;
+    height: 600px;
+    & > *{
+        margin-bottom: 2rem ;
+
+    }
+}
+
+.main-section{
+    color: $text;
+    height: 100vh;
+    background: $background;
+    &__left{
+        margin-left: 7rem;
+        margin-top: -5rem;
+        max-width: 700px;
+
+        &--greetings{
+        font-size: 4.12rem;
+        font-weight: 700;
+        margin-bottom: 0px;
             & span{
-                color:$lighttext;
+                color: $contrastcolor;
             }
         }
-
+        &--do{
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        &--desc{
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
     }
+    &__right{
+        height: 100%;
+        flex:1;
+        position: relative;
+        &--backgroundcolor{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            width: 350px;
+            height: 350px;
+            border-radius: 45% 55% 34% 66% / 26% 29% 71% 74% ;
+            transform: translate(-63%, -50%) rotate(180deg);
+            background: #4CA1AF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #C4E0E5, $secondbackground);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #C4E0E5, $secondbackground); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+        }
+    }
+}
+
+.about{
+    height: 120vh;
+    background:$secondbackground;
+    position: relative;
+    .custom-shape-divider-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        & svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 73px;
+        }
+        & .shape-fill {
+            fill: #FFFFFF;
+        }
+    }
+    .about-content{
+        padding: 100px 2rem 0;
+
+        &__left{
+            color: $background;
+            flex: 1;
+            &--heading{
+                $contrastcolor:#09e2ee;
+                color: $contrastcolor;
+                margin-bottom: 10px;
+                font-size: $largefont;
+            }
+            
+        }
+    }
+
+    .curve{
+        position: absolute;
+        height: 225px;
+        width: 100%;
+        bottom: 0;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background:$background;
+            bottom: 12px;
+            transform: translate(85%, 65%);
+        }
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background:$secondbackground;
+            bottom: 0;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+    }
+
 }
