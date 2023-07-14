@@ -1,18 +1,17 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');   
-// 
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 // $background:#222831;
 $secondbackground:#242998;
 $background:#FFFFFF;
-$text:#1b1b1b;
+$text:#111111;
 $hovercolor:#353535;
 $contrastcolor:#00ADB5;
 $fw:500;
-$fs:19px;
-$largefont: 4.12rem;
+$fs:20px;
+$largefontsize: 4.12rem;
 $headerFont:'Rubik', sans-serif;
 $subHeaderFont:'Proxima Soft', sans-serif;
-
+$otherFont: 'Fuzzy Bubbles', cursive;
 
 body{
 margin: 0;
@@ -20,15 +19,34 @@ padding: 0;
 box-sizing: border-box;
 position: relative;
 overflow-x: hidden;
-
+    .background-pattern{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 120vh;
+        z-index: -1;
+        background:
+        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e2e2e2 68% 70%,#0000 72%) 24px 24px/calc(2*24px) calc(2*24px),
+        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e2e2e2 68% 70%,#0000 72%) 24px 24px/calc(2*24px) calc(2*24px),
+        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e2e2e2 68% 70%,#0000 72%) 0 0/calc(2*24px) calc(2*24px),
+        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e2e2e2 68% 70%,#0000 72%) 0 0/calc(2*24px) calc(2*24px),
+        repeating-conic-gradient(#ffffff 0 25%,#0000 0 50%) 0 0/calc(2*24px) calc(2*24px),
+        radial-gradient(#0000 66%,#e2e2e2 68% 70%,#0000 72%) 0 calc(24px/2)/24px 24px
+        #ffffff;
+    }
     nav{
-        // background:$background;  
         height: 8vh;
-        padding: 10px;
+        padding: 10px 50px;
+        align-items: center;
         .main-logo{
+            margin-top: 5px;
             &__text{
-                color: $text;
-
+                font-family: $otherFont;
+                font-size: 25px;
+                margin-bottom: 0;
+                & a{
+                    color:$text;
+                }
             }
         }
         .right-nav{
@@ -38,9 +56,9 @@ overflow-x: hidden;
                 font-size: $fs;
                 font-family: $headerFont;
                 list-style: none;
-                margin-right: 2rem;
+                margin-right: 1.8rem;
                 li{
-                    padding-right: 10px;
+                    margin-right: 1.5rem;
                 }
                 a{
                     text-decoration: none;
@@ -51,34 +69,33 @@ overflow-x: hidden;
                     }
                 }
             }
-            button{
+            .contact{
                 border: none;
+                box-shadow: 0 3px 4px 0 #0000006b ;
                 background:$contrastcolor;
                 border-radius: 10px;
                 padding: 2px 15px;
                 margin-right: 2rem;
+                &:hover{
+                    color: white;
+                    background: hsl(183, 100%, 20%);
+                }
                 a{
                     text-decoration: none;
                     color: $text;
+                    font-size: 1.1rem;
+                    font-weight: $fw;
+                    color: $background;
                 }
             }
         }
-    }
-}
-.floating-links{
-    position: absolute;
-    display:flex;
-    height: 600px;
-    & > *{
-        margin-bottom: 2rem ;
-
     }
 }
 
 .main-section{
     color: $text;
     height: 100vh;
-    background: $background;
+    // background: $background;
     &__left{
         margin-left: 7rem;
         margin-top: -5rem;
@@ -100,6 +117,18 @@ overflow-x: hidden;
             font-weight: 400;
             font-size: 1.2rem;
         }
+        & .resume{
+            margin-top: 25px;
+            background: $contrastcolor;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            box-shadow: 0 4px 4px 0 #0000006b;
+            font-weight: $fw;
+            font-size: $fs;
+            font-family: $subHeaderFont;
+        }
     }
     &__right{
         height: 100%;
@@ -111,36 +140,67 @@ overflow-x: hidden;
             left: 50%;
             width: 350px;
             height: 350px;
-            border-radius: 45% 55% 34% 66% / 26% 29% 71% 74% ;
+            border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;;
             transform: translate(-63%, -50%) rotate(180deg);
             background: #4CA1AF;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to bottom, #C4E0E5, $secondbackground);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to bottom, #C4E0E5, $secondbackground); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+            animation: morph 8s ease-in-out infinite;
         }
     }
+}
+@keyframes morph {
+	0% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+		background-size: 100% 100%;
+	}
+
+	50% {
+		border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+		background-size: 300% 150%;
+	}
+
+	100% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+		background-size: 100% 100%;
+	}
 }
 
 .about{
     height: 100vh;
     background:$secondbackground;
     position: relative;
-    .custom-shape-divider-top {
+    .custom-shape-divider-bottom{
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         overflow: hidden;
         line-height: 0;
+        transform: rotate(180deg);
+        background:
+        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e2e2e2 68% 70%,#0000 72%) 24px 24px/calc(2*24px) calc(2*24px),
+        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e2e2e2 68% 70%,#0000 72%) 24px 24px/calc(2*24px) calc(2*24px),
+        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e2e2e2 68% 70%,#0000 72%) 0 0/calc(2*24px) calc(2*24px),
+        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e2e2e2 68% 70%,#0000 72%) 0 0/calc(2*24px) calc(2*24px),
+        repeating-conic-gradient(#ffffff 0 25%,#0000 0 50%) 0 0/calc(2*24px) calc(2*24px),
+        radial-gradient(#0000 66%,#e2e2e2 68% 70%,#0000 72%) 0 calc(24px/2)/24px 24px
+        #ffffff;
+  
+  
+    
         & svg {
             position: relative;
             display: block;
             width: calc(100% + 1.3px);
             height: 73px;
         }
+    
         & .shape-fill {
-            fill: #FFFFFF;
+            fill: #242998;
         }
     }
+    
     .about-content{
         padding: 100px 2rem 0;
 
@@ -151,7 +211,7 @@ overflow-x: hidden;
                 $contrastcolor:#09e2ee;
                 color: $contrastcolor;
                 margin-bottom: 10px;
-                font-size: $largefont;
+                font-size: $largefontsize;
             }
             &--desc{
                 font-size: 15px;
