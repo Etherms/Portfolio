@@ -14,7 +14,7 @@ function function3() {
 var functions = [function1, function2, function3];
 var index = 0;
 
-var intervalId = setInterval(function() {
+var intervalId = setInterval(function() { 
   functions[index](); // Call the function at the current index
 
   index++; // Move to the next index
