@@ -98,7 +98,7 @@ body nav .right-nav button a {
 }
 
 .about {
-  height: 120vh;
+  height: 100vh;
   background: #242998;
   position: relative;
 }
@@ -130,6 +130,45 @@ body nav .right-nav button a {
   color: #09e2ee;
   margin-bottom: 10px;
   font-size: 4.12rem;
+}
+.about .about-content__left--desc {
+  font-size: 15px;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+.about .about-content .seperator {
+  position: relative;
+}
+.about .about-content .seperator__line {
+  width: 8px;
+  height: 50vh;
+  position: absolute;
+  transform: translate(50% 50%);
+  bottom: 25px;
+  background-color: #00ADB5;
+}
+.about .about-content .seperator__circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #00ADB5;
+}
+.about .about-content__right {
+  flex: 1;
+}
+.about .about-content__right .right_content .divider-line {
+  width: 60%;
+  height: 5px;
+  background: #FFFFFF;
+  margin: 10px 0;
+}
+.about .about-content__right .right_content__text {
+  color: #FFFFFF;
+}
+.about .about-content__right .right_content__text--value {
+  color: #00ADB5;
+  font-size: 3rem;
+  font-weight: 500;
 }
 .about .curve {
   position: absolute;

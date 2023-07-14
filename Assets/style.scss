@@ -115,7 +115,7 @@ overflow-x: hidden;
 }
 
 .about{
-    height: 120vh;
+    height: 100vh;
     background:$secondbackground;
     position: relative;
     .custom-shape-divider-top {
@@ -147,7 +147,49 @@ overflow-x: hidden;
                 margin-bottom: 10px;
                 font-size: $largefont;
             }
-            
+            &--desc{
+                font-size: 15px;
+                font-weight: 300;
+                color: #FFFFFF;
+            }
+        }
+        & .seperator{
+            position:relative;
+            &__line{
+                width: 8px;
+                height: 50vh;
+                position: absolute;
+                transform: translate(50% 50%);
+                bottom: 25px;
+                background-color: $contrastcolor;
+            }
+            &__circle{
+                width: 15px;
+                height: 15px;
+                border-radius: 15px;
+                background-color: $contrastcolor;
+            }
+
+        }
+        &__right{
+            flex: 1;
+            .right_content {
+                .divider-line{
+                    width: 60%;
+                    height: 5px;
+                    background: $background;
+                    margin: 10px 0;
+                }
+                &__text{
+                    color: $background;
+                    &--value{
+                        color: $contrastcolor;
+                        font-size:3wrem;
+                        font-weight: 500;
+                    }
+                }
+
+            }
         }
     }
 
