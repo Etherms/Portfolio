@@ -6,14 +6,6 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-body .background-pattern {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 120vh;
-  z-index: -1;
-  background: radial-gradient(35.36% 35.36% at 100% 25%, rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 24px 24px/48px 48px, radial-gradient(35.36% 35.36% at 0 75%, rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 24px 24px/48px 48px, radial-gradient(35.36% 35.36% at 100% 25%, rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 0 0/48px 48px, radial-gradient(35.36% 35.36% at 0 75%, rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 0 0/48px 48px, repeating-conic-gradient(#ffffff 0 25%, rgba(0, 0, 0, 0) 0 50%) 0 0/48px 48px, radial-gradient(rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 0 12px/24px 24px #ffffff;
-}
 body nav {
   height: 8vh;
   padding: 10px 50px;
@@ -73,7 +65,8 @@ body nav .right-nav .contact a {
 
 .main-section {
   color: #111111;
-  height: 100vh;
+  height: 85vh;
+  padding-top: 40px;
 }
 .main-section__left {
   margin-left: 7rem;
@@ -91,6 +84,34 @@ body nav .right-nav .contact a {
 .main-section__left--do {
   font-weight: 400;
   margin-bottom: 30px;
+}
+.main-section__left--do .value-animation {
+  display: inline-block;
+  width: 140px;
+  height: 26px;
+  margin-top: 8px;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 12px;
+}
+.main-section__left--do .value-animation span {
+  position: absolute;
+  width: 115px;
+  left: 14px;
+  animation: textanimation 3s ease-in-out infinite;
+}
+.main-section__left--do .value-animation::before {
+  content: "[";
+  position: absolute;
+  left: 0;
+  top: -7px;
+}
+.main-section__left--do .value-animation::after {
+  content: "]";
+  position: absolute;
+  right: 0;
+  top: -7px;
 }
 .main-section__left--desc {
   font-weight: 400;
@@ -120,30 +141,81 @@ body nav .right-nav .contact a {
   width: 350px;
   height: 350px;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  transform: translate(-63%, -50%) rotate(180deg);
-  background: #4CA1AF; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #C4E0E5, #242998); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #C4E0E5, #242998); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transform: translate(-63%, -50%);
+  background-image: url("/Assets/img/mypic.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
   animation: morph 8s ease-in-out infinite;
+  box-shadow: 0 0 10px 2px #5a5a5a;
+}
+.main-section__right .wavy {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+}
+.main-section__right .wavy::before {
+  content: "aaaaaaaaaa";
+  position: absolute;
+  top: -42px;
+  left: 0;
+  font-size: 4em;
+  color: transparent;
+  text-decoration-style: wavy;
+  text-decoration-color: rgb(7, 18, 177);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  animation: waves 4s linear infinite;
+}
+.main-section__right .position1 {
+  bottom: 24%;
+  transform: rotate(30deg);
+}
+.main-section__right .position2 {
+  transform: rotate(343deg);
+  right: 10%;
+  top: 13%;
+}
+.main-section__right .position3 {
+  top: 11%;
 }
 
+@keyframes textanimation {
+  0% {
+    transform: translateY(-20px);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes waves {
+  0% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(-55px);
+  }
+}
 @keyframes morph {
   0% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background-size: 100% 100%;
   }
   50% {
     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    background-size: 300% 150%;
   }
   100% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background-size: 100% 100%;
   }
 }
 .about {
   height: 100vh;
-  background: #242998;
+  background: #123c8a;
   position: relative;
 }
 .about .custom-shape-divider-bottom {
@@ -154,7 +226,7 @@ body nav .right-nav .contact a {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  background: radial-gradient(35.36% 35.36% at 100% 25%, rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 24px 24px/48px 48px, radial-gradient(35.36% 35.36% at 0 75%, rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 24px 24px/48px 48px, radial-gradient(35.36% 35.36% at 100% 25%, rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 0 0/48px 48px, radial-gradient(35.36% 35.36% at 0 75%, rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 0 0/48px 48px, repeating-conic-gradient(#ffffff 0 25%, rgba(0, 0, 0, 0) 0 50%) 0 0/48px 48px, radial-gradient(rgba(0, 0, 0, 0) 66%, #e2e2e2 68% 70%, rgba(0, 0, 0, 0) 72%) 0 12px/24px 24px #ffffff;
+  background: #ffffff;
 }
 .about .custom-shape-divider-bottom svg {
   position: relative;
@@ -163,27 +235,59 @@ body nav .right-nav .contact a {
   height: 73px;
 }
 .about .custom-shape-divider-bottom .shape-fill {
-  fill: #242998;
+  fill: #123c8a;
 }
 .about .about-content {
   padding: 100px 2rem 0;
 }
 .about .about-content__left {
   color: #FFFFFF;
+  padding-right: 2rem;
   flex: 1;
 }
 .about .about-content__left--heading {
   color: #09e2ee;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-size: 4.12rem;
 }
 .about .about-content__left--desc {
   font-size: 15px;
-  font-weight: 300;
   color: #FFFFFF;
+  margin-bottom: 4rem;
+  line-height: 1.2rem;
+}
+.about .about-content__left .schools__college {
+  margin-bottom: 40px;
+}
+.about .about-content__left .schools__college--name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: -4px;
+}
+.about .about-content__left .schools__college--desc {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  margin-bottom: 5px;
+}
+.about .about-content__left .schools__college--other {
+  font-weight: 400;
+}
+.about .about-content__left .schools__highschool--name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: -4px;
+}
+.about .about-content__left .schools__highschool--desc {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  margin-bottom: 5px;
+}
+.about .about-content__left .schools__highschool--other {
+  font-weight: 400;
 }
 .about .about-content .seperator {
   position: relative;
+  padding-right: 2rem;
 }
 .about .about-content .seperator__line {
   width: 8px;
@@ -213,7 +317,7 @@ body nav .right-nav .contact a {
 }
 .about .about-content__right .right_content__text--value {
   color: #00ADB5;
-  font-size: 3wrem;
+  font-size: 3rem;
   font-weight: 500;
 }
 .about .curve {
@@ -240,7 +344,7 @@ body nav .right-nav .contact a {
   border-radius: 100% 50%;
   width: 55%;
   height: 100%;
-  background: #242998;
+  background: #123c8a;
   bottom: 0;
   transform: translate(-4%, 40%);
   z-index: -1;
