@@ -6,66 +6,32 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-body nav {
-  height: 8vh;
-  padding: 10px 50px;
-  align-items: center;
+body .main-background {
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 2.9fr 1.1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "main-background__left main-background__right";
 }
-body nav .main-logo {
-  margin-top: 5px;
+body .main-background__left {
+  grid-area: main-background__left;
+  background: #003B77;
 }
-body nav .main-logo__text {
-  font-family: "Fuzzy Bubbles", cursive;
-  font-size: 25px;
-  margin-bottom: 0;
-}
-body nav .main-logo__text a {
-  color: #111111;
-}
-body nav .right-nav {
-  margin-left: auto;
-}
-body nav .right-nav ul {
-  font-weight: 500;
-  font-size: 20px;
-  font-family: "Rubik", sans-serif;
-  list-style: none;
-  margin-right: 1.8rem;
-}
-body nav .right-nav ul li {
-  margin-right: 1.5rem;
-}
-body nav .right-nav ul a {
-  text-decoration: none;
-  color: #111111;
-  outline: none;
-}
-body nav .right-nav ul a:hover {
-  color: #353535;
-}
-body nav .right-nav .contact {
-  border: none;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4196078431);
-  background: #00ADB5;
-  border-radius: 10px;
-  padding: 2px 15px;
-  margin-right: 2rem;
-}
-body nav .right-nav .contact:hover {
-  color: white;
-  background: hsl(183, 100%, 20%);
-}
-body nav .right-nav .contact a {
-  text-decoration: none;
-  color: #111111;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #FFFFFF;
+body .main-background__right {
+  grid-area: main-background__right;
+  background: #6EE4E3;
 }
 
 .main-section {
-  color: #111111;
-  height: 85vh;
+  color: #ffffff;
+  height: 92vh;
   padding-top: 40px;
 }
 .main-section__left {
@@ -79,7 +45,7 @@ body nav .right-nav .contact a {
   margin-bottom: 0px;
 }
 .main-section__left--greetings span {
-  color: #00ADB5;
+  color: #6EE4E3;
 }
 .main-section__left--do {
   font-weight: 400;
@@ -87,7 +53,7 @@ body nav .right-nav .contact a {
 }
 .main-section__left--do .value-animation {
   display: inline-block;
-  width: 140px;
+  width: 150px;
   height: 26px;
   margin-top: 8px;
   position: absolute;
@@ -98,20 +64,24 @@ body nav .right-nav .contact a {
 .main-section__left--do .value-animation span {
   position: absolute;
   width: 115px;
-  left: 14px;
+  left: 19px;
   animation: textanimation 3s ease-in-out infinite;
 }
 .main-section__left--do .value-animation::before {
   content: "[";
+  color: #6EE4E3;
   position: absolute;
   left: 0;
   top: -7px;
+  font-weight: 600;
 }
 .main-section__left--do .value-animation::after {
   content: "]";
   position: absolute;
+  color: #6EE4E3;
   right: 0;
   top: -7px;
+  font-weight: 600;
 }
 .main-section__left--desc {
   font-weight: 400;
@@ -217,25 +187,6 @@ body nav .right-nav .contact a {
   height: 100vh;
   background: #123c8a;
   position: relative;
-}
-.about .custom-shape-divider-bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-  background: #ffffff;
-}
-.about .custom-shape-divider-bottom svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 73px;
-}
-.about .custom-shape-divider-bottom .shape-fill {
-  fill: #123c8a;
 }
 .about .about-content {
   padding: 100px 2rem 0;

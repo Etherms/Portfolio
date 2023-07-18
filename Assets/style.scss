@@ -3,8 +3,9 @@
 // $background:#222831;
 $secondbackground:#123c8a;
 $background:#FFFFFF;
-$text:#111111;
+$text:#ffffff;
 $hovercolor:#353535;
+$contrastcolor2:#6EE4E3;
 $contrastcolor:#00ADB5;
 $fw:500;
 $fs:20px;
@@ -19,67 +20,35 @@ padding: 0;
 box-sizing: border-box;
 position: relative;
 overflow-x: hidden;
-    nav{
-        height: 8vh;
-        padding: 10px 50px;
-        align-items: center;
-        .main-logo{
-            margin-top: 5px;
-            &__text{
-                font-family: $otherFont;
-                font-size: 25px;
-                margin-bottom: 0;
-                & a{
-                    color:$text;
-                }
+    .main-background{
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 2.9fr 1.1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "main-background__left main-background__right"; 
+          &__left { 
+            grid-area: main-background__left;
+            background: #003B77;
             }
-        }
-        .right-nav{
-            margin-left: auto;
-            ul{
-                font-weight: $fw;
-                font-size: $fs;
-                font-family: $headerFont;
-                list-style: none;
-                margin-right: 1.8rem;
-                li{
-                    margin-right: 1.5rem;
-                }
-                a{
-                    text-decoration: none;
-                    color: $text;
-                    outline: none;
-                    &:hover{
-                        color:$hovercolor ; 
-                    }
-                }
+          &__right { 
+            grid-area: main-background__right;
+            background: #6EE4E3;
             }
-            .contact{
-                border: none;
-                box-shadow: 0 3px 4px 0 #0000006b ;
-                background:$contrastcolor;
-                border-radius: 10px;
-                padding: 2px 15px;
-                margin-right: 2rem;
-                &:hover{
-                    color: white;
-                    background: hsl(183, 100%, 20%);
-                }
-                a{
-                    text-decoration: none;
-                    color: $text;
-                    font-size: 1.1rem;
-                    font-weight: $fw;
-                    color: $background;
-                }
-            }
-        }
+      }
     }
-}
+
 
 .main-section{
     color: $text;
-    height: 85vh;
+    height: 92vh;
     padding-top: 40px;
     &__left{
         margin-left: 7rem;
@@ -91,7 +60,7 @@ overflow-x: hidden;
         font-weight: 700;
         margin-bottom: 0px;
             & span{
-                color: $contrastcolor;
+                color: $contrastcolor2;
             }
         }
         &--do{
@@ -99,7 +68,7 @@ overflow-x: hidden;
             margin-bottom: 30px;
             .value-animation{
                 display: inline-block;
-                width: 140px;
+                width: 150px;
                 height: 26px;
                 margin-top: 8px;
                 position: absolute;
@@ -109,20 +78,24 @@ overflow-x: hidden;
                 span{
                     position: absolute;
                     width: 115px;
-                    left: 14px;
+                    left: 19px;
                     animation: textanimation 3s ease-in-out infinite;
                 }
                 &::before{
                     content: '[';
+                    color: $contrastcolor2;
                     position: absolute;
                     left: 0;
                     top: -7px;
+                    font-weight: 600;
                 }
                 &::after{
                     content: ']';
                     position: absolute;
+                    color: $contrastcolor2;
                     right: 0;
                     top: -7px;
+                    font-weight: 600;
                 }
             }
         }
@@ -234,29 +207,6 @@ overflow-x: hidden;
     height: 100vh;
     background:$secondbackground;
     position: relative;
-    .custom-shape-divider-bottom{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-        background:#ffffff;
-  
-  
-    
-        & svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 73px;
-        }
-    
-        & .shape-fill {
-        fill:$secondbackground ;
-        }
-    }
     
     .about-content{
         padding: 100px 2rem 0;
