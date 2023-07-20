@@ -199,14 +199,173 @@ nav .hamburger-menu {
   }
 }
 .about {
+  overflow: hidden;
+  padding-top: 20px;
   height: 100vh;
+  position: relative;
 }
 .about-background {
+  animation: bganimation linear 20s infinite;
+  overflow: hidden;
   z-index: -1;
-  width: 100%;
+  width: 200%;
   height: 100vh;
   position: absolute;
   background-image: url('data:image/svg+xml,%3Csvg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="%239C92AC" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E');
+}
+.about-header {
+  margin-left: 112px;
+  width: 80vw;
+}
+.about-header .about-title {
+  font-size: 4.12rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+  color: #00ADB5;
+}
+.about-header .about-desc {
+  font-size: 1.1rem;
+  color: rgb(34, 34, 34);
+}
+.about-content {
+  display: flex;
+  margin: 0px 112px;
+}
+.about-content-left {
+  margin-top: 30px;
+  flex: 1;
+}
+.about-content-left .school {
+  margin-top: 30px;
+}
+.about-content-left .school-name {
+  font-size: 25px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.about-content-left .school-program {
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(61, 61, 61);
+  font-family: "Proxima Soft", sans-serif;
+}
+.about-content-left .school-desc {
+  margin-bottom: 0px;
+}
+.about-content-right {
+  margin-left: 70px;
+  padding: 20px;
+  flex: 1;
+}
+.about-content-right .fields .field .top-line {
+  width: 100%;
+  height: 3px;
+  background: rgb(82, 82, 82);
+  margin-bottom: 20px;
+}
+.about-content-right .fields .field-content-count {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(31, 31, 31);
+  margin-right: 20px;
+}
+.about-content-right .fields .field-content-name {
+  margin-top: 10px;
+  font-size: 2.3rem;
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  color: #0c6165;
+  line-height: 35px;
+  text-shadow: 0px 0px 1px black;
+}
+.about-content-right .fields .field-content-buttons {
+  position: relative;
+  margin-left: auto;
+}
+.about-content-right .fields .field-content-buttons-placeholder {
+  font-size: 19px;
+  font-family: "Proxima Soft", sans-serif;
+  margin-top: 12px;
+}
+.about-content-right .fields .field-content-button {
+  display: block;
+  width: 32px;
+  height: 77px;
+  border-radius: 10px;
+  background: #00ADB5;
+  border: 1px solid rgb(49, 49, 49);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4196078431);
+  transform: rotate(270deg);
+  position: absolute;
+  bottom: -11px;
+  right: 23px;
+  overflow: hidden;
+}
+.about-content-right .fields .field-content-button a {
+  margin-top: 2px;
+}
+.about-content-right .fields .field-content-button a span {
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  transform: rotate(45deg);
+}
+.about-content-right .fields .field-content-button a span:nth-child(2) {
+  animation-delay: -0.1s;
+}
+.about-content-right .fields .field-content-button a span:nth-child(3) {
+  animation-delay: -0.2s;
+}
+.about-content-right .fields .field-content-button:hover {
+  background: hsl(183, 100%, 20%);
+}
+.about-content-right .fields .field-content-button:hover span {
+  animation: animate 2s infinite;
+}
+
+@keyframes bganimation {
+  0% {
+    transform: translateX(-48.5vw);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-15px, -15px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(15px, 15px);
+  }
+}
+.divider {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 50vh;
+  background-color: #00ADB5;
+}
+
+.circle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  top: 45%;
+  left: -8px;
+  background-color: #00ADB5;
 }
 
 /*# sourceMappingURL=style.css.map */
