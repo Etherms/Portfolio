@@ -22,3 +22,29 @@ var intervalId = setInterval(function() {
     index = 0; // Reset the index if it exceeds the array length
   }
 }, 3000);
+
+
+
+var insideMenu = document.querySelector(".inside-menu");
+var hamburgerMenu = document.querySelector(".ham");
+
+function hidehamburger() {
+  insideMenu.classList.add("hide")
+}
+function showopacity(){
+  insideMenu.style.opacity = "1";
+}
+
+hamburgerMenu.addEventListener("click", () => {
+  if (hamburgerMenu.classList.contains("active")) {
+    insideMenu.classList.remove("hide");
+    setTimeout(showopacity,5);
+  }
+  else {
+    insideMenu.style.opacity = "0";
+    setTimeout(hidehamburger, 100);
+  }   
+});
+
+
+

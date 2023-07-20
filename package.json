@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch":"sass --watch  Assets/style.scss Assets/style.css"
+    "watch": "sass --watch  Assets/style.scss Assets/style.css"
   },
   "author": "Edson Hermosa",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.3.4",
     "sass": "^1.63.6"
   }
 }

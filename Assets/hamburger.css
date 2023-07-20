@@ -1,0 +1,87 @@
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#003c77ea;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+  .ham6 .top {
+    stroke-dasharray: 40 172;
+  }
+  .ham6 .middle {
+    stroke-dasharray: 40 111;
+  }
+  .ham6 .bottom {
+    stroke-dasharray: 40 172;
+  }
+  .ham6.active .top {
+    stroke-dashoffset: -132px;
+  }
+  .ham6.active .middle {
+    stroke-dashoffset: -71px;
+  }
+  .ham6.active .bottom {
+    stroke-dashoffset: -132px;
+  }
+
+  .inside-menu{
+    right: 2%;
+    top: 1%;
+    z-index: 1;
+    padding: 40px 25px 15px;
+    border-radius: 15px;
+    display: block;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    box-shadow: 0 0 10px 2px #000000db;
+ }
+ .hide{
+  display: none;
+ }
+
+ .inside-menu ul{
+  list-style-type: none;
+  padding-left: 0px;
+ }
+
+ .inside-menu li{
+  margin-bottom: 15px;
+ }
+ .inside-menu li a{
+  text-decoration: none;
+  color:#003c77 ;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family:'Proxima Soft', sans-serif;
+ }
+ p.contacts-email a{
+  text-decoration: none;
+  color:#003c77 ;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family:'Proxima Soft', sans-serif;
+ }
+ p.text-placeholder {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: 'Proxima Soft', sans-serif;
+  color: #838388;
+  letter-spacing: 2px;
+}
