@@ -1,0 +1,156 @@
+@import '../_fonts';
+.main-section{
+    color: $text;
+    height: 88vh;
+    &__left{
+        margin-left: 7rem;
+        margin-top: -5rem;
+        max-width: 700px;
+
+        &--greetings{
+        font-size: 4.12rem;
+        font-weight: 700;
+        margin-bottom: 0px;
+            & span{
+                color: $contrastcolor2;
+            }
+        }
+        &--do{
+            font-weight: 400;
+            margin-bottom: 30px;
+            .value-animation{
+                display: inline-block;
+                width: 150px;
+                height: 26px;
+                margin-top: 8px;
+                position: absolute;
+                text-align: center;
+                overflow: hidden;
+                margin-left: 12px;
+                span{
+                    position: absolute;
+                    width: 115px;
+                    left: 19px;
+                    animation: textanimation 3s ease-in-out infinite;
+                }
+                &::before{
+                    content: '[';
+                    color: $contrastcolor2;
+                    position: absolute;
+                    left: 0;
+                    top: -7px;
+                    font-weight: 600;
+                }
+                &::after{
+                    content: ']';
+                    position: absolute;
+                    color: $contrastcolor2;
+                    right: 0;
+                    top: -7px;
+                    font-weight: 600;
+                }
+            }
+        }
+        &--desc{
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        & .resume{
+            margin-top: 25px;
+            background: $contrastcolor;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            box-shadow: 0 4px 4px 0 #0000006b;
+            font-weight: $fw;
+            font-size: $fs;
+            font-family: $subHeaderFont;
+        }
+    }
+    &__right{
+        height: 100%;
+        flex:1;
+        position: relative;
+        &--backgroundcolor{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            width: 350px;
+            height: 350px;
+            border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;;
+            transform: translate(-63%, -50%) ;
+            background-image: url("../Assets/img/mypic.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: morph 8s ease-in-out infinite;
+            box-shadow: 0 0 10px 2px #5a5a5a;
+        }
+        .wavy{
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            overflow: hidden;
+        }
+        .wavy::before {
+            content: 'aaaaaaaaaa';
+            position: absolute;
+            top: -42px;
+            left: 0;
+            font-size: 4em;
+            color: transparent;
+            text-decoration-style:wavy;
+            text-decoration-color: rgb(7, 18, 177);
+            text-decoration-line: underline;
+            text-decoration-thickness: 2px;
+            animation: waves 4s linear infinite;
+        }
+        .position1 {
+            bottom: 24%;
+            transform: rotate(30deg);
+        }
+        .position2 {
+            transform: rotate(343deg);
+            right: 10%;
+            top: 13%;
+        }
+        .position3{
+            top: 11%;
+        }
+    }
+}
+@keyframes textanimation{
+    0%{
+        transform: translateY(-20px);
+    }
+    25%{
+        transform: translateY(-5px);
+    }
+    75%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
+@keyframes waves{
+    0%{
+        transform: translateX(-1px);
+    }
+    100%{
+        transform: translateX(-55px);
+    }
+}
+@keyframes morph {
+	0% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+
+	50% {
+		border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+	}
+
+	100% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+}

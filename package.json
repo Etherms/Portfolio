@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "sass --watch  Assets/style.scss Assets/style.css"
+    "watch": "sass --watch  Assets/sass/style.scss Assets/style.css"
   },
   "author": "Edson Hermosa",
   "license": "ISC",
