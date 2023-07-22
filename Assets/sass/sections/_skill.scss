@@ -1,16 +1,34 @@
-.skils{
+@import '../_fonts';
+@import '../_colors';
+.skills{
     height: 100vh;
+    &-header{
+        padding:20px 112px 0px; ;
+        &-title{
+            font-size: 3rem;
+            font-weight: 600;
+            color:$contrastcolor;
+            font-family: $headerFont;
+        }
+    }
 }
-.slider{
-    margin: auto;
+.skill-text-title h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: $headerFont;
+}
+.skills-main-content{
+    padding: 0px 112px ;
+}
+.slider-container {
+    width: 80%;
+    overflow-x: hidden;
+    height: 102px;
+    margin: 0 auto;
     position: relative;
-    // width: 80%;
-    display: grid;
-    place-items: center;
-    // overflow: hidden;
-    background-color: rgb(255, 255, 255);
+    padding-top: 10px;
     &::before,&::after{
-        
         content: '';
         height: 100%;
         position: absolute;
@@ -20,16 +38,19 @@
     &::before{
         left: 0;
         top: 0;
-        background: linear-gradient(to right, rgba(255,255,255,1)0%,
-        rgba(255,255,255,0)100%);
+        background: linear-gradient(to right, rgb(0 0 0 / 8%) 0%, rgb(0 0 0 / 0%) 100%);
     }
     &::after{
         right: 0;
         top: 0;
-        transform: scale(1.5);
-        background: linear-gradient(to left, rgba(255,255,255,1)0%,
-        rgba(255,255,255,0)100%);
+        background: linear-gradient(to left, rgb(0 0 0 / 8%) 0%, rgb(0 0 0 / 0%) 100%);
     }
+}
+.slider{
+    margin: auto;
+    position: relative;
+    display: grid;
+    place-items: center;
 }
 .webdev-cards-container{
     display: flex;
@@ -37,22 +58,27 @@
     margin-right: auto;
     // width: calc(250px * 8);
     position: relative;
-    animation: scroll 20s linear infinite;
+    animation: scroll 60s linear infinite;
     &:hover{
         animation-play-state: paused;
     }
 
 }
 .slide{
-    width: 200px;
+    width: 116px;
     padding: 5px 10px;
-    border: 1px solid black;
-    margin-right: 20px;
-    font-size:1.1rem;
+    margin-right: 40px;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: $headerFont;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    box-shadow: 4px 4px 8px 0px #00000080;
+    border-radius: 5px;
+    transition: all 0.25s;
+    background: rgb(255 255 255 / 60%);
+    cursor: pointer;
     &:hover{
         transform: scale(1.1)
     }
@@ -67,7 +93,7 @@ img.svg-icon{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-105px *8));
+        transform: translateX(-1560px);
     }
     
 }
