@@ -40,7 +40,7 @@
                 <li><a href="#main-section">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">My Skill</a></li>
-                <li><a href="#">Latest Projects</a></li>
+                <li><a href="#projects">Latest Projects</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <hr>
@@ -170,7 +170,9 @@
             <p class="skills-header-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nesciunt assumenda placeat saepe natus amet est omnis quam itaque, odio minus quo mollitia ab officia optio deleniti distinctio ipsum quas?</p>
         </div>
         <div class="skills-main-content">
-            <div class="webdev-container">
+            <div class="webdev-container" data-aos="fade-up"
+            data-aos-offset="100"
+            data-aos-duration="1500">
                 <div class="skill-text-title"><h1>Website Development</h1></div>
                 <div class="slider-container">
                     <div class="slider">
@@ -200,8 +202,10 @@
                     </div>
                 </div>
             </div>
-            <div class="gamedev-container ">
-                <div class="skill-text-title mt-5"><h1>Game Development</h1></div>
+            <div class="gamedev-container" data-aos="fade-up"
+            data-aos-offset="100"
+            data-aos-duration="1500">
+                <div class="skill-text-title mt-3"><h1>Game Development</h1></div>
                 <div class="slider-container">
                     <div class="slider">
                         <div class="gamedev-cards-container">
@@ -225,8 +229,10 @@
                     </div>
                 </div>
             </div>
-            <div class="other-container">
-                <div class="skill-text-title mt-5"><h1>Other</h1></div>
+            <div class="other-container" data-aos="fade-up"
+            data-aos-offset="100"
+            data-aos-duration="1500">
+                <div class="skill-text-title mt-3"><h1>Other</h1></div>
                 <div class="slider-container">
                     <div class="slider">
                         <div class="other-cards-container">
@@ -252,7 +258,72 @@
             </div>
         </div>
     </section>
-    <section class="projects"></section>
+    <section class="projects" id="projects">
+        <div class="projects-header">
+            <h1 class="projects-header-title">Latest <br> Projects</h1>
+        </div>
+        <div class="projects-cards-container">
+
+            <div class="project-card project1">
+                <div class="top-line"></div>
+                <div class="project-card-content">
+                    <img src="Assets/img/sapatoes.png" alt="Sapatoes project" class="project-card-image">
+                    <div class="project-card-context">
+                        <h3 class="project-name">Sapatoes</h3>
+                        <p class="project-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis numquam voluptates laudantium? Dolore, eum molestias!</p>
+                    </div>
+                    <div class="project-buttons-container">
+                        <div class="project-button-inside">
+                            <a href="https://github.com/Etherms/NewDemoTheme" class="project-source-button project-buttons">View Source</a>
+                        </div>
+                        <div class="project-button-inside">
+                            <a href="https://store2968.myshopify.com" class="project-visit-button project-buttons">View Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card project2">
+                <div class="top-line"></div>
+                <div class="project-card-content">
+                    <img src="Assets/img/MMS.png" alt="MMS pproject" class="project-card-image">
+                    <div class="project-card-context">
+                        <h3 class="project-name">Manhours Management System</h3>
+                        <p class="project-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis numquam voluptates laudantium? Dolore, eum molestias!</p>
+                    </div>
+                    <div class="project-buttons-container">
+                        <div class="project-button-inside">
+                            <a href="https://github.com/Archieloo/i4-asia-mms" class="project-source-button project-buttons">View Source</a>
+                        </div>
+                        <div class="project-button-inside">
+                            <a href="https://i4-asia-mms-production-139e.up.railway.app" class="project-visit-button project-buttons">View Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card project3">
+                <div class="top-line"></div>
+                <div class="project-card-content">
+                    <img src="Assets/img/coding castle.png" alt="First-project" class="project-card-image">
+                    <div class="project-card-context">
+                        <h3 class="project-name">Coding Castle</h3>
+                        <p class="project-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis numquam voluptates laudantium? Dolore, eum molestias!</p>
+                    </div>
+                    <div class="project-buttons-container">
+                        <div class="project-button-inside">
+                            <a href="https://github.com/RyeZam/Coding-Castle" class="project-source-button project-buttons">View Source</a>
+                        </div>
+                        <div class="project-button-inside">
+                            <a href="#" class="project-visit-button project-buttons">View Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
     <section class="contact"></section>
 
 
