@@ -516,6 +516,7 @@ img.svg-icon {
   box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.2509803922);
   position: relative;
   border-radius: 10px;
+  min-height: 400px;
 }
 .project-card .top-line {
   width: 100%;
