@@ -1,7 +1,6 @@
 @import '../_fonts';
 @import '../_colors';
 .skills{
-    height: 100vh;
     &-header{
         padding:20px 112px 0px; ;
         &-title{
@@ -9,6 +8,9 @@
             font-weight: 600;
             color:$contrastcolor;
             font-family: $headerFont;
+        }
+        &-desc{
+            text-align:justify;
         }
     }
 }
@@ -52,7 +54,7 @@
     display: grid;
     place-items: center;
 }
-.webdev-cards-container{
+.webdev-cards-container, .gamedev-cards-container, .other-cards-container{
     display: flex;
     margin-left:auto;
     margin-right: auto;

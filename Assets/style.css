@@ -25,8 +25,7 @@
   display: flex;
   align-items: end;
   justify-content: flex-end;
-  height: 100vh;
-  margin-top: 9rem;
+  margin-top: 12rem;
 }
 
 .circle1, .circle2 {
@@ -388,9 +387,6 @@
   background-color: #00ADB5;
 }
 
-.skills {
-  height: 100vh;
-}
 .skills-header {
   padding: 20px 112px 0px;
 }
@@ -399,6 +395,9 @@
   font-weight: 600;
   color: #00ADB5;
   font-family: "Rubik", sans-serif;
+}
+.skills-header-desc {
+  text-align: justify;
 }
 
 .skill-text-title h1 {
@@ -445,14 +444,14 @@
   place-items: center;
 }
 
-.webdev-cards-container {
+.webdev-cards-container, .gamedev-cards-container, .other-cards-container {
   display: flex;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   animation: scroll 60s linear infinite;
 }
-.webdev-cards-container:hover {
+.webdev-cards-container:hover, .gamedev-cards-container:hover, .other-cards-container:hover {
   animation-play-state: paused;
 }
 
