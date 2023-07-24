@@ -22,10 +22,6 @@
     .main-section__left--desc{
         line-height: 1.8rem;
     }
-    .main-section__right{
-        display: flex;
-        justify-content: center;
-    }
     .main-background{
         display: flex !important;
         flex-direction: column;
@@ -36,6 +32,40 @@
     .main-background__right{
         flex: 1;
     }
+    .picture-container{
+        justify-content: flex-start !important;
+    }
+    .main-section__right--backgroundcolor {
+        width: 360px;
+        height: 360px;
+    }
+    /* About */
+    .about-content{
+        flex-direction: column;
+        margin: 0px 45px;
+    }
+    .college-school{
+        margin-top: 0px !important;
+    }
+    .about-content-right{
+        margin-left: 0px;
+        margin-top: 50px;
+        padding: 20px 0px !important;
+    }
+    .field-content-buttons{
+        display: none;
+    }
+    .divider {
+        top: 65%;
+        width: 36vh;
+        height: 15px;
+    }
+    .circle {
+        top: -33%;
+        left: 48%;
+    }
+
+
     /* What I already know */
     .skills-main-content {
         padding: 0px 15px;
@@ -59,7 +89,7 @@
     }
     .icon-links-container
     {  width: 100%;
-        justify-content: space-around;
+        justify-content: space-around !important;
     }
     .icons-link-inside{
         margin-right: 0px !important; 
