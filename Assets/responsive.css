@@ -1,0 +1,33 @@
+@media (max-width:915px ) {
+    .main-section{
+        flex-direction: column;
+        padding-top: 5rem;  
+    }
+    .main-section__left{
+        margin: 0px 10px 30px;
+    }
+    .main-section__left--greetings{
+        white-space: nowrap;
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .main-section__left--desc{
+
+        line-height: 1.8rem;
+    }
+    .main-section__right{
+        display: flex;
+        justify-content: center;
+    }
+    .main-background{
+        display: flex !important;
+        flex-direction: column;
+    }
+    .main-background__left{
+        flex:3;
+    }
+    .main-background__right{
+        flex: 1;
+    }
+}

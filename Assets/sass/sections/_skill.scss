@@ -1,6 +1,7 @@
 @import '../_fonts';
 @import '../_colors';
 .skills{
+    overflow: hidden;
     &-header{
         padding:20px 45px 0px; ;
         &-title{
