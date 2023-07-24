@@ -62,7 +62,7 @@
         justify-content: space-around;
     }
     .icons-link-inside{
-        margin-right: 0px;
+        margin-right: 0px !important; 
     }
 
 }
