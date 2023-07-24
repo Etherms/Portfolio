@@ -1,7 +1,8 @@
 @media (max-width:915px ) {
+    /* Main Section */
     .main-section{
         flex-direction: column;
-        padding-top: 5rem;  
+        padding-top: 6rem;  
     }
     .main-section__left{
         margin: 0px 10px 30px;
@@ -30,4 +31,33 @@
     .main-background__right{
         flex: 1;
     }
+    /* What I already know */
+    .skills-main-content {
+        padding: 0px 15px;
+    }
+    /* Projects */
+    .projects-cards-container {
+        flex-direction: column;
+    }
+    .project-card {
+        width: 80vw;
+    }
+    .project1{
+        margin-bottom: 101px;
+    }
+    .project2{
+        margin-bottom: 159px;
+    }
+    /* Contact */
+    .contact-content-right .contactUs-container {
+        width: 100%;
+    }
+    .icon-links-container
+    {  width: 100%;
+        justify-content: space-around;
+    }
+    .icons-link-inside{
+        margin-right: 0px;
+    }
+
 }

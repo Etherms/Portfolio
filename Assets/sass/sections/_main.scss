@@ -1,12 +1,11 @@
 @import '../_fonts';
 .main-section{
     color: $text;
-    height: 92vh;
+    height: 100vh;
     &__left{
         margin-left: 7rem;
-        margin-top: -5rem;
-        max-width: 700px;
-
+        margin-top: 6rem;
+        flex: 1;
         &--greetings{
         font-size: 4.12rem;
         font-weight: 700;
