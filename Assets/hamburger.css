@@ -51,6 +51,7 @@
     transition: all 1s ease-in-out;
     opacity: 0;
     box-shadow: 0 0 10px 2px #000000db;
+    width: 300px;
  }
  .hide{
   display: none;
@@ -84,4 +85,11 @@
   font-family: 'Proxima Soft', sans-serif;
   color: #838388;
   letter-spacing: 2px;
+}
+.application-contacts{
+  display: flex;
+  justify-content: space-between;
+}
+.link-icon{
+  width: 40px;
 }

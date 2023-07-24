@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 .background-animation {
   display: flex;
@@ -124,6 +124,7 @@
 .main-section__left--desc {
   font-weight: 400;
   font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
 }
 .main-section__left .resume {
   margin-top: 25px;
@@ -135,7 +136,7 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4196078431);
   font-weight: 500;
   font-size: 20px;
-  font-family: "Proxima Soft", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .main-section__right {
   height: 100%;
@@ -191,7 +192,6 @@
 }
 .about {
   overflow: hidden;
-  padding-top: 20px;
   position: relative;
 }
 .about-background {
@@ -202,6 +202,15 @@
   height: 100%;
   position: absolute;
   background-image: url('data:image/svg+xml,%3Csvg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="%239C92AC" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E');
+}
+.about-background::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(126, 6, 6);
+  filter: blur(1px);
 }
 .about-header {
   padding: 0px 45px;
@@ -216,11 +225,13 @@
 }
 .about-header .about-desc {
   font-size: 1.1rem;
-  color: rgb(34, 34, 34);
+  color: #252525;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 .about-content {
   display: flex;
-  margin: 0px 112px;
+  margin: 0px 112px 20px;
 }
 .about-content-left {
   margin-top: 30px;
@@ -228,6 +239,7 @@
 }
 .about-content-left .school {
   margin-top: 30px;
+  color: #252525;
 }
 .about-content-left .school-name {
   font-size: 25px;
@@ -244,6 +256,7 @@
 }
 .about-content-left .school-desc {
   margin-bottom: 0px;
+  font-family: "Inter", sans-serif;
 }
 .about-content-right {
   margin-left: 70px;
@@ -253,14 +266,15 @@
 .about-content-right .fields .field .top-line {
   width: 100%;
   height: 3px;
-  background: rgb(82, 82, 82);
+  background: #252525;
   margin-bottom: 20px;
 }
 .about-content-right .fields .field-content-count {
   font-size: 2rem;
   font-weight: 500;
-  color: rgb(31, 31, 31);
+  color: #252525;
   margin-right: 20px;
+  margin-top: 5px;
 }
 .about-content-right .fields .field-content-name {
   margin-top: 10px;
@@ -274,10 +288,11 @@
 .about-content-right .fields .field-content-buttons {
   position: relative;
   margin-left: auto;
+  color: #252525;
 }
 .about-content-right .fields .field-content-buttons-placeholder {
   font-size: 19px;
-  font-family: "Proxima Soft", sans-serif;
+  font-family: "Inter", sans-serif;
   margin-top: 12px;
 }
 .about-content-right .fields .field-content-button {
@@ -373,6 +388,8 @@
 }
 .skills-header-desc {
   text-align: justify;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
 .skill-text-title h1 {
@@ -443,7 +460,7 @@
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.5019607843);
   border-radius: 5px;
   transition: all 0.25s;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
 .slide:hover {
@@ -511,8 +528,8 @@ img.svg-icon {
 }
 .project-card-content .project-card-context .project-desc {
   font-size: 15px;
-  font-family: "Proxima Soft", sans-serif;
-  font-weight: 200;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   text-align: justify;
   padding: 0 20px;
   margin-bottom: 5px;
@@ -537,7 +554,7 @@ img.svg-icon {
   padding: 5px 8px;
   border-radius: 5px;
   position: relative;
-  transition: all 0.1s;
+  transition: all 0.2s;
 }
 .project-card-content .project-button-inside .project-buttons::after {
   content: "→";
@@ -603,6 +620,7 @@ img.svg-icon {
 .contact-header-desc {
   text-align: justify;
   font-size: 18px;
+  font-family: "Inter", sans-serif;
 }
 .contact-content {
   padding: 0px 45px;
@@ -639,16 +657,15 @@ img.svg-icon {
   margin-bottom: 10px;
 }
 .contact-content-right .contactUs-container .input-container label {
-  font-family: "Rubik", sans-serif;
-  font-weight: 300;
+  font-family: "Inter", sans-serif;
   margin-bottom: 2px;
 }
 .contact-content-right .contactUs-container .input-container input[type=text], .contact-content-right .contactUs-container .input-container input[type=email], .contact-content-right .contactUs-container .input-container #message {
   height: 40px;
   color: #2b2b2b;
   font-size: 16px;
-  font-family: "Proxima Soft", sans-serif;
-  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   background: rgba(242, 242, 242, 0.6470588235);
   backdrop-filter: blur(5px);
   box-shadow: inset 0px 0px 4px 2px rgba(0, 0, 0, 0.163);
