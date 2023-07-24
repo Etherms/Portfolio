@@ -12,8 +12,14 @@
         font-size: 3rem;
         margin-bottom: 10px;
     }
+    .main-section__left--do .value-animation{
+        margin-left: 8px;
+        width: 119px;
+    }
+    .main-section__left--do .value-animation span{
+        left: 3px;
+    }
     .main-section__left--desc{
-
         line-height: 1.8rem;
     }
     .main-section__right{
