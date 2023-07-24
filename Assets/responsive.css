@@ -5,13 +5,12 @@
         padding-top: 6rem;  
     }
     .main-section__left{
-        margin: 0px 10px 30px;
+        margin: 0px 45px 30px;
     }
     .main-section__left--greetings{
         white-space: nowrap;
         font-size: 3rem;
         margin-bottom: 10px;
-        text-align: center;
     }
     .main-section__left--desc{
 
