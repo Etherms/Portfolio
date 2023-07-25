@@ -336,7 +336,7 @@
 
 
         </div>
-    </section>
+    </section>    
     <section class="contact" id="contact">
         <div class="contact-background"></div>
         <div class="contact-header">
@@ -345,25 +345,26 @@
         </div>
         <div class="contact-content">
             <div class="contact-content-right">
-                <form class="contactUs-container" data-aos="zoom-in" data-aos-offset="100"
+                <form class="contactUs-container" id="my-form" method="post" action="https://formspree.io/f/mnqknrqa" name="emailContact" data-aos="zoom-in" data-aos-offset="100"
                 data-aos-duration="1500"> 
+                <p class="success" id="my-form-status"></p>
                     <div class="name-field-container d-flex flex-column input-container">
                         <label for="name">Your name</label>
-                        <input type="text">
+                        <input type="text" required name="userName">
                     </div>
                     <div class="email-field-container d-flex flex-column input-container">
                         <label for="email">Your email</label>
-                        <input type="email" >
+                        <input type="email" required name="userEmail" >
                     </div>
                     <div class="subject-field-container d-flex flex-column input-container">
                         <label for="subject">Your email subject</label>
-                        <input type="text">
+                        <input type="text" required name="userSubject">
                     </div>
                     <div class="message-field-container d-flex flex-column input-container">
                         <label for="message">Your message</label>
-                        <textarea name="message" id="message"></textarea>
+                        <textarea name="message" id="message" required name="userMessage" name="send"></textarea>
                     </div>
-                    <button class="send-button">Send</button>
+                    <button type="submit" class="send-button"> Send</button>
                 </form>
                 <div class="icon-links-container" data-aos="fade-up"data-aos-duration="1000"  data-aos-anchor-placement="bottom">
                     <a class="icons-link-inside"href="https://github.com/Etherms"><img loading="lazy" src="Assets/svg/github2.svg" alt="github" class="github-link-icon link-icon"></a>
