@@ -137,6 +137,11 @@
   font-weight: 500;
   font-size: 20px;
   font-family: "Inter", sans-serif;
+  transition: all 0.2s ease-in;
+}
+.main-section__left .resume:hover {
+  background: rgb(0, 73, 77);
+  color: rgb(224, 224, 224);
 }
 .main-section__right {
   height: 100%;
@@ -687,6 +692,11 @@ img.svg-icon {
   font-size: 17px;
   margin-bottom: -5px;
   box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4196078431);
+  transition: all 0.2s ease-in;
+}
+.contact-content-right .contactUs-container .send-button:hover {
+  background: rgb(0, 73, 77);
+  color: rgb(224, 224, 224);
 }
 .contact-content-right .icon-links-container {
   display: flex;

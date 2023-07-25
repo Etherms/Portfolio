@@ -91,6 +91,11 @@
                     font-size: 17px;
                     margin-bottom: -5px;
                     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4196078431);;
+                    transition: all 0.2s ease-in;
+                    &:hover{
+                        background: rgb(0, 73, 77);
+                        color: rgb(224, 224, 224);
+                    }
                 }
             }
             .icon-links-container
