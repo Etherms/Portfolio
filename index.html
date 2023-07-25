@@ -77,14 +77,17 @@
 
 
 
-    <section id="about"class="about">
+    <section id="about"class="about" data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-duration="1500">
         <div class="about-background"></div>
         <div class="about-header">
             <h1 class="about-title">About Me</h1>
             <p class="about-desc">I'm Edson, a graduating Filipino IT student from the Philippines. I've been coding for four years and am still eager to learn new techniques and technologies. My background and areas of interest are as follows:</p>
         </div>
         <div class="about-content">
-            <div class="about-content-left">
+            <div class="about-content-left" data-aos="flip-left" data-aos-offset="100"
+            data-aos-duration="1500">
                 <div class="school college-school">
                     <h3 class="school-name">Polytechnic University of the Philippines, Manila</h3>
                     <p class="school-program">Bachelor of Science in Information Technology 2019 - 2023</p>
@@ -97,7 +100,8 @@
                 </div>
 
             </div>
-            <div class="about-content-right">
+            <div class="about-content-right" data-aos="flip-right" data-aos-offset="100"
+            data-aos-duration="1500">
                 <div class="fields">
                     <div class="field field1">
                         <div class="top-line"></div>
@@ -337,7 +341,8 @@
 
         </div>
     </section>    
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="zoom-out-up" data-aos-offset="100"
+    data-aos-duration="1500">
         <div class="contact-background"></div>
         <div class="contact-header">
             <h1 class="contact-header-title">Get in touch</h1>
@@ -347,7 +352,6 @@
             <div class="contact-content-right">
                 <form class="contactUs-container" id="my-form" method="post" action="https://formspree.io/f/mnqknrqa" name="emailContact" data-aos="zoom-in" data-aos-offset="100"
                 data-aos-duration="1500"> 
-                <p class="success" id="my-form-status"></p>
                     <div class="name-field-container d-flex flex-column input-container">
                         <label for="name">Your name</label>
                         <input type="text" required name="userName">
@@ -365,6 +369,7 @@
                         <textarea name="message" id="message" required name="userMessage" name="send"></textarea>
                     </div>
                     <button type="submit" class="send-button"> Send</button>
+                    <p class="success" id="my-form-status"></p>
                 </form>
                 <div class="icon-links-container" data-aos="fade-up"data-aos-duration="1000"  data-aos-anchor-placement="bottom">
                     <a class="icons-link-inside"href="https://github.com/Etherms"><img loading="lazy" src="Assets/svg/github2.svg" alt="github" class="github-link-icon link-icon"></a>
