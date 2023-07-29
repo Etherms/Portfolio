@@ -69,6 +69,11 @@
             font-weight: $fw;
             font-size: $fs;
             font-family: $subHeaderFont;
+            transition: all 0.2s ease-in;
+            &:hover{
+                background: rgb(0, 73, 77);
+                color: rgb(224, 224, 224);
+            }
         }
     }
     &__right{

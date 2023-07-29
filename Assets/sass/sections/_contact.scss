@@ -91,6 +91,11 @@
                     font-size: 17px;
                     margin-bottom: -5px;
                     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4196078431);;
+                    transition: all 0.2s ease-in;
+                    &:hover{
+                        background: rgb(0, 73, 77);
+                        color: rgb(224, 224, 224);
+                    }
                 }
             }
             .icon-links-container
@@ -105,6 +110,18 @@
                         height: 50px;
                     }
                 }   
+            }
+            .success{
+                background: #9fd2a1;
+                text-align: center;
+                padding: 0px 10px; 
+                color: #326b07; 
+                border-radius: 3px; 
+                margin-top: 30px;
+                font-weight: 500;
+                p{
+                    margin-bottom: 0px;
+                }
             }
             
         }

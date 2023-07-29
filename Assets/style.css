@@ -137,6 +137,11 @@
   font-weight: 500;
   font-size: 20px;
   font-family: "Inter", sans-serif;
+  transition: all 0.2s ease-in;
+}
+.main-section__left .resume:hover {
+  background: rgb(0, 73, 77);
+  color: rgb(224, 224, 224);
 }
 .main-section__right {
   height: 100%;
@@ -687,6 +692,11 @@ img.svg-icon {
   font-size: 17px;
   margin-bottom: -5px;
   box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4196078431);
+  transition: all 0.2s ease-in;
+}
+.contact-content-right .contactUs-container .send-button:hover {
+  background: rgb(0, 73, 77);
+  color: rgb(224, 224, 224);
 }
 .contact-content-right .icon-links-container {
   display: flex;
@@ -699,6 +709,18 @@ img.svg-icon {
 .contact-content-right .icon-links-container a .link-icon {
   width: 40px;
   height: 50px;
+}
+.contact-content-right .success {
+  background: #9fd2a1;
+  text-align: center;
+  padding: 0px 10px;
+  color: #326b07;
+  border-radius: 3px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+.contact-content-right .success p {
+  margin-bottom: 0px;
 }
 
 body {

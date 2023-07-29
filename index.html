@@ -65,7 +65,7 @@
             <h1 class="main-section__left--greetings">Hi, I'm <span>Edson</span></h1>
             <h3  class="main-section__left--do">I develop and design <div class="value-animation"><span class="do-value">Software!</span></div></h3> 
             <p class="main-section__left--desc">I enjoy creating software that makes people's lives easier by developing elegant, performant, and maintainable frontend code. I also enjoy playing games such as Valorant, Genshin, and others.</p>
-            <button class="resume"><a href="Assets/files/Hermosa,Edson-CV.pdf" style="text-decoration: none; color: white;">Download CV</a></button>
+            <button class="resume"><a href="Assets/files/Edson-Hermosa-CV.pdf" style="text-decoration: none; color: white;">Download CV</a></button>
         </div>
         <div class="main-section__right"data-aos="fade-up-left" data-aos-duration="3000">
             <div class="picture-container">
@@ -77,14 +77,17 @@
 
 
 
-    <section id="about"class="about">
+    <section id="about"class="about" data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-duration="1500">
         <div class="about-background"></div>
         <div class="about-header">
             <h1 class="about-title">About Me</h1>
             <p class="about-desc">I'm Edson, a graduating Filipino IT student from the Philippines. I've been coding for four years and am still eager to learn new techniques and technologies. My background and areas of interest are as follows:</p>
         </div>
         <div class="about-content">
-            <div class="about-content-left">
+            <div class="about-content-left" data-aos="flip-left" data-aos-offset="100"
+            data-aos-duration="1500">
                 <div class="school college-school">
                     <h3 class="school-name">Polytechnic University of the Philippines, Manila</h3>
                     <p class="school-program">Bachelor of Science in Information Technology 2019 - 2023</p>
@@ -97,7 +100,8 @@
                 </div>
 
             </div>
-            <div class="about-content-right">
+            <div class="about-content-right" data-aos="flip-right" data-aos-offset="100"
+            data-aos-duration="1500">
                 <div class="fields">
                     <div class="field field1">
                         <div class="top-line"></div>
@@ -336,8 +340,9 @@
 
 
         </div>
-    </section>
-    <section class="contact" id="contact">
+    </section>    
+    <section class="contact" id="contact" data-aos="zoom-out-up" data-aos-offset="100"
+    data-aos-duration="1500">
         <div class="contact-background"></div>
         <div class="contact-header">
             <h1 class="contact-header-title">Get in touch</h1>
@@ -345,25 +350,26 @@
         </div>
         <div class="contact-content">
             <div class="contact-content-right">
-                <form class="contactUs-container" data-aos="zoom-in" data-aos-offset="100"
+                <form class="contactUs-container" id="my-form" method="post" action="https://formspree.io/f/mnqknrqa" name="emailContact" data-aos="zoom-in" data-aos-offset="100"
                 data-aos-duration="1500"> 
                     <div class="name-field-container d-flex flex-column input-container">
                         <label for="name">Your name</label>
-                        <input type="text" class="name-content">
+                        <input type="text" required name="userName">
                     </div>
                     <div class="email-field-container d-flex flex-column input-container">
                         <label for="email">Your email</label>
-                        <input type="email" class="email-content" >
+                        <input type="email" required name="userEmail" >
                     </div>
                     <div class="subject-field-container d-flex flex-column input-container">
                         <label for="subject">Your email subject</label>
-                        <input type="text" class="subject-content">
+                        <input type="text" required name="userSubject">
                     </div>
                     <div class="message-field-container d-flex flex-column input-container">
                         <label for="message">Your message</label>
-                        <textarea name="message" id="message" class="message-content"></textarea>
+                        <textarea name="message" id="message" required name="userMessage" name="send"></textarea>
                     </div>
-                    <button class="send-button">Send</button>
+                    <button type="submit" class="send-button"> Send</button>
+                    <p class="success" id="my-form-status"></p>
                 </form>
                 <div class="icon-links-container" data-aos="fade-up"data-aos-duration="1000"  data-aos-anchor-placement="bottom">
                     <a class="icons-link-inside"href="https://github.com/Etherms"><img loading="lazy" src="Assets/svg/github2.svg" alt="github" class="github-link-icon link-icon"></a>
