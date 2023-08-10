@@ -1,5 +1,4 @@
 <h1>Edson Hermosa - Portfolio Website</h1>
-<br>
 <p>URL</p><a href="https://etherms.github.io/Portfolio/">https://etherms.github.io/Portfolio/</a>
 <p>A Portfolio website that shows what I have accomplished so far<p>
 
