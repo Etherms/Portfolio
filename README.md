@@ -9,8 +9,8 @@
     <li><a href="https://getbootstrap.com">Bootstrap</a></li>
     <li>NPM / Node.js</li>
 </ul>
-<img src="./Assets/img/page1.png">
-<img src="./Assets/img/page2.png">
-<img src="./Assets/img/page3.png">
-<img src="./Assets/img/page4.png">
-<img src="./Assets/img/page5.png">
+<img src="./Assets/img/preview1.png">
+<img src="./Assets/img/preview2.png">
+<img src="./Assets/img/preview3.png">
+<img src="./Assets/img/preview4.png">
+<img src="./Assets/img/preview5.png">
