@@ -1,6 +1,6 @@
 <h1>Edson Hermosa - Portfolio Website</h1>
 <p>URL</p><a href="https://etherms.github.io/Portfolio/">https://etherms.github.io/Portfolio/</a>
-<p>A Portfolio website that shows what I have accomplished so far<p>
+<p>A Portfolio website that shows what I have accomplished so far [September 2023]<p>
 
 <h2>Built With</h2>
 <ul>
