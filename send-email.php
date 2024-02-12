@@ -13,7 +13,7 @@
         $body .= "Subject: $subject\n";
         $body .= "Message:\n$message";
 
-        $headers = "From $name <$email>";
+        $headers = "From: $name <$email>";
 
         if (mail($to, $subject, $body, $headers)) {
             echo "Thank you for contacting us. We will get back to you soon.";
